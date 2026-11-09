@@ -1,0 +1,15 @@
+name: FirestEventowki
+version: '1.0.0'
+main: pl.firest.eventowki.FirestEventowkiPlugin
+api-version: '1.21'
+description: Przedmioty eventowe - miecz, torba, totem i zbroja
+
+commands:
+  firestareventowki:
+    description: Komendy administracji eventowek
+    usage: /firestareventowki give|panel|lista|reload
+
+permissions:
+  firest.eventowki.admin:
+    description: Dostep do /firestareventowki
+    default: op

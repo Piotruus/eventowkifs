@@ -1,0 +1,178 @@
+# ============================================================
+#  FirestEventowki - przedmioty eventowe
+#  Kolory: kody z & (np. &6 &l), kolory HEX: &#ff8800
+#  Resource pack: Firest-Pack.zip (bez niego item-model pokaze fioletowa kratke!)
+# ============================================================
+
+pouch:
+  lifetime-minutes: 15          # po tylu minutach przedmiot w torbie znika
+  button-name: "&a&lWYPŁAĆ WSZYSTKO"
+  button-lore:
+    - "&7Kliknij, aby przenieść wszystkie"
+    - "&7przedmioty do swojego ekwipunku."
+    - ""
+    - "&7Przedmiotów w torbie: &e%n%"
+  expire-line: "&c⌛ Znika za: &e%czas%"
+
+totem:
+  lose-ratio: 0.5               # jaka czesc przedmiotow gracz traci przy smierci z totemem
+
+armor:
+  set-bonus:
+    enabled: true               # bonus za zalozenie calego kompletu (4 elementy)
+    effects:                    # NAZWA:POZIOM (poziom 0 = I)
+      - "FIRE_RESISTANCE:0"
+      - "SPEED:0"
+
+panel:
+  title: "&6&lPanel Eventówek"
+
+messages:
+  prefix: "&8[&6Eventówki&8] "
+  no-permission: "&cNie masz uprawnień do tej komendy."
+  only-player: "&cTa komenda jest tylko dla graczy."
+  usage: "&7Użycie: &f/firestareventowki give (gracz) (item) [ilość] &8| &fpanel &8| &flista &8| &freload"
+  player-offline: "&cGracz &f%gracz% &cnie jest online."
+  unknown-item: "&cNie ma takiego itemu. Wpisz &f/firestareventowki lista"
+  given: "&aDano &f%gracz% &8» &e%ilosc%x %item%"
+  reloaded: "&aPrzeładowano konfigurację."
+  list-header: "&7Dostępne itemy: &f%lista%"
+  panel-given: "&aOtrzymałeś: &f%item%"
+  pouch-captured: "&6Przedmioty ofiary trafiły do torby &7(&e%n%&7)"
+  pouch-full: "&cTwoja torba jest pełna - reszta łupów wypadła na ziemię."
+  pouch-withdrawn: "&aWypłacono &e%n% &aprzedmiotów z torby."
+  pouch-nothing: "&cTorba jest pusta."
+  pouch-inv-full: "&cMasz pełny ekwipunek - część przedmiotów została w torbie."
+  totem-used: "&c&lTOTEM &7ocalił połowę Twojego ekwipunku!"
+  totem-restored: "&aOdzyskałeś część przedmiotów dzięki totemowi."
+
+# ------------------------------------------------------------
+#  Itemy. Id: miecz, sakwa, totem, helm, napiersnik, spodnie, buty
+#  %czas% = lifetime-minutes, %sloty% = 45
+# ------------------------------------------------------------
+items:
+  miecz:
+    material: NETHERITE_SWORD
+    item-model: "firest:miecz"
+    name: "&6&lᴘᴌᴏᴍɪᴇɴɴʏ ᴍɪᴇᴄᴢ"
+    enchants:
+      sharpness: 7
+      fire_aspect: 2
+      unbreaking: 4
+    lore:
+      - "&8⚔ &7Wykuty w sercu wulkanu z płomieni,"
+      - "&7które nigdy nie gasną."
+      - ""
+      - "&6✦ &eOstrze rozgrzane do czerwoności"
+      - "&6✦ &eKażde trafienie podpala przeciwnika"
+      - ""
+      - "&6&lEVENTOWY &8» &7Przedmiot specjalny"
+
+  sakwa:
+    material: BLAZE_POWDER
+    item-model: "firest:sakwa"
+    name: "&6&lᴘʟᴏɴᴀᴄᴀ ᴛᴏʀʙᴀ"
+    lore:
+      - "&7Torba żarzących się węgli, która"
+      - "&7zbiera łupy pokonanych wrogów."
+      - ""
+      - "&6✦ &eMając ją w ekwipunku, po zabiciu gracza"
+      - "&e   jego przedmioty trafiają do torby"
+      - "&6✦ &ePojemność: &f%sloty% &eslotów"
+      - "&6✦ &eŁupy znikają po &f%czas% &eminutach"
+      - ""
+      - "&8» &7Kliknij &fPPM&7, aby otworzyć"
+      - ""
+      - "&6&lEVENTOWY &8» &7Przedmiot specjalny"
+
+  totem:
+    material: GHAST_TEAR
+    item-model: "firest:totem"
+    name: "&c&lᴛᴏᴛᴇᴍ ᴅʀᴜɢɪᴇᴊ ꜱᴢᴀɴꜱʏ"
+    lore:
+      - "&7Pradawny totem, który szepcze"
+      - "&7o drugiej szansie."
+      - ""
+      - "&c✦ &7Miej go w ekwipunku, gdy zginiesz"
+      - "&c✦ &7Stracisz tylko &epołowę &7ekwipunku"
+      - "&c✦ &7Totem zużywa się przy śmierci"
+      - ""
+      - "&6&lEVENTOWY &8» &7Przedmiot specjalny"
+
+  helm:
+    material: NETHERITE_HELMET
+    item-model: "firest:helm"
+    equip-model: "firest:plonaca"
+    name: "&6&lᴘᴌᴏᴍɪᴇɴɴʏ ʜᴇᴌᴍ"
+    enchants:
+      protection: 5
+      unbreaking: 4
+      respiration: 3
+      aqua_affinity: 1
+    lore:
+      - "&8» &7Część zestawu &6&lᴘʟᴏɴᴀᴄᴀ ᴢʙʀᴏᴊᴀ"
+      - "&7Obsydian, w którym wciąż tli się lawa."
+      - ""
+      - "&6Bonus pełnego kompletu:"
+      - "&e✦ &7Odporność na ogień"
+      - "&e✦ &7Szybkość I"
+      - ""
+      - "&6&lEVENTOWY &8» &7Zbroja płomieni"
+
+  napiersnik:
+    material: NETHERITE_CHESTPLATE
+    item-model: "firest:napiersnik"
+    equip-model: "firest:plonaca"
+    name: "&6&lᴘᴌᴏᴍɪᴇɴɴʏ ɴᴀᴘɪᴇʀꜱ́ɴɪᴋ"
+    enchants:
+      protection: 5
+      unbreaking: 4
+      thorns: 3
+    lore:
+      - "&8» &7Część zestawu &6&lᴘʟᴏɴᴀᴄᴀ ᴢʙʀᴏᴊᴀ"
+      - "&7Pancerz, który parzy każdego, kto go dotknie."
+      - ""
+      - "&6Bonus pełnego kompletu:"
+      - "&e✦ &7Odporność na ogień"
+      - "&e✦ &7Szybkość I"
+      - ""
+      - "&6&lEVENTOWY &8» &7Zbroja płomieni"
+
+  spodnie:
+    material: NETHERITE_LEGGINGS
+    item-model: "firest:spodnie"
+    equip-model: "firest:plonaca"
+    name: "&6&lᴘᴌᴏᴍɪᴇɴɴᴇ ꜱᴘᴏᴅɴɪᴇ"
+    enchants:
+      protection: 5
+      unbreaking: 4
+      swift_sneak: 3
+    lore:
+      - "&8» &7Część zestawu &6&lᴘʟᴏɴᴀᴄᴀ ᴢʙʀᴏᴊᴀ"
+      - "&7Lekkie jak dym, twarde jak skała."
+      - ""
+      - "&6Bonus pełnego kompletu:"
+      - "&e✦ &7Odporność na ogień"
+      - "&e✦ &7Szybkość I"
+      - ""
+      - "&6&lEVENTOWY &8» &7Zbroja płomieni"
+
+  buty:
+    material: NETHERITE_BOOTS
+    item-model: "firest:buty"
+    equip-model: "firest:plonaca"
+    name: "&6&lᴘᴌᴏᴍɪᴇɴɴᴇ ʙᴜᴛʏ"
+    enchants:
+      protection: 5
+      unbreaking: 4
+      feather_falling: 4
+      depth_strider: 3
+    lore:
+      - "&8» &7Część zestawu &6&lᴘʟᴏɴᴀᴄᴀ ᴢʙʀᴏᴊᴀ"
+      - "&7Każdy krok zostawia żar na ziemi."
+      - ""
+      - "&6Bonus pełnego kompletu:"
+      - "&e✦ &7Odporność na ogień"
+      - "&e✦ &7Szybkość I"
+      - ""
+      - "&6&lEVENTOWY &8» &7Zbroja płomieni"
